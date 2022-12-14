@@ -121,7 +121,6 @@ script = ExtResource("9_pdnxj")
 
 [node name="Blink" type="ColorRect" parent="UI"]
 visible = false
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -130,7 +129,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Overlay" type="MarginContainer" parent="UI"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -160,7 +158,6 @@ vertical_alignment = 2
 script = ExtResource("5_34xk0")
 
 [node name="HUD" type="MarginContainer" parent="UI"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -185,7 +182,6 @@ script = ExtResource("13_v2wgq")
 
 [node name="Message" type="MarginContainer" parent="UI"]
 custom_minimum_size = Vector2(0, 300)
-layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -216,7 +212,6 @@ libraries = {
 [node name="InventoryUI" parent="UI" instance=ExtResource("11_p3hu3")]
 unique_name_in_owner = true
 visible = false
-layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 1792.0

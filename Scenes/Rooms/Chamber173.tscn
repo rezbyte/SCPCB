@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/RotatingLight.gd" id="1_qq5we"]
 [ext_resource type="LightmapGIData" uid="uid://c0ai53vb20d2f" path="res://Models/Rooms/173Chamber/Bake/Chamber173.lmbake" id="2_dfx7s"]
-[ext_resource type="PackedScene" uid="uid://l2d0ybv5320m" path="res://Models/Rooms/173Chamber/173_chamber.glb" id="2_edx27"]
 [ext_resource type="AudioStream" uid="uid://dr3ipeetvygq" path="res://Sounds/Alarm/Alarm.ogg" id="3_1jysj"]
+[ext_resource type="PackedScene" uid="uid://dqqo4odtbedb5" path="res://Models/Rooms/173Chamber/173_chamber_collisions.tscn" id="3_qb6g2"]
 [ext_resource type="PackedScene" uid="uid://c65ateth04o4d" path="res://Scenes/AudioProbes/ReverbHuge.tscn" id="4_31iym"]
 [ext_resource type="PackedScene" uid="uid://bug7i4dgc07uc" path="res://Scenes/AudioProbes/ReverbHigh.tscn" id="5_87ar2"]
 [ext_resource type="PackedScene" uid="uid://cebxeqe61r3s8" path="res://Scenes/Interactables/Doors/LCZDoor.tscn" id="5_57101"]
@@ -261,6 +261,7 @@ light_energy = 0.148
 omni_range = 28.617
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
+visible = false
 quality = 3
 interior = true
 generate_probes_subdiv = 3
@@ -268,18 +269,21 @@ light_data = ExtResource("2_dfx7s")
 
 [node name="ReflectionProbeChamber" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.2919, 7.26275, -14.983)
+visible = false
 extents = Vector3(14.4816, 4.20146, 11.9436)
 box_projection = true
 enable_shadows = true
 
 [node name="ReflectionProbeChamber2" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5099, 7.85464, -2.34411)
+visible = false
 extents = Vector3(6.78673, 4.20146, 6.94169)
 box_projection = true
 enable_shadows = true
 
 [node name="FogVolume" type="FogVolume" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.9209, 7.54214, -15.469)
+visible = false
 extents = Vector3(13.6353, 3.72552, 12.189)
 material = SubResource("FogMaterial_evbqo")
 
@@ -291,7 +295,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2988, 3.82452, -11.5906)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/StaticBody3D"]
 shape = SubResource("WorldBoundaryShape3D_0fny0")
 
-[node name="173_chamber" parent="." instance=ExtResource("2_edx27")]
+[node name="173_chamber" parent="." instance=ExtResource("3_qb6g2")]
 
 [node name="AudioProbes" type="Node3D" parent="."]
 
